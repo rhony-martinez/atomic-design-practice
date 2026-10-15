@@ -1,1 +1,151 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-primario: #0E528D;
+    --color-secundario: #00A3E0;
+    --color-acento: #FF4B60;
+    --color-fondo: #FFFFFF;
+    --color-fondo-alt: #F4F7F9;
+    --color-texto: #1D2A3A;
+    --color-texto-sec: #5C6B73;
+    --bs-primary: #0E528D;
+    --bs-primary-rgb: 14, 82, 141;
+}
+
+body {
+    margin: 0;
+    background: var(--color-fondo-alt);
+    color: var(--color-texto);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.app-navbar {
+    background: var(--color-fondo);
+    border-bottom: 1px solid rgba(14, 82, 141, 0.12);
+    box-shadow: 0 2px 12px rgba(29, 42, 58, 0.05);
+}
+
+.navbarbrand {
+    color: var(--color-primario);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.app-navbar .nav-link {
+    color: var(--color-texto-sec);
+    font-weight: 500;
+    transition: color 150ms ease;
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link:focus {
+    color: var(--color-secundario);
+}
+
+.container-main {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+h1,
+h2,
+h5 {
+    color: var(--color-primario);
+}
+
+.card-atom {
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid rgba(14, 82, 141, 0.12);
+    border-radius: 0.75rem;
+    background: var(--color-fondo);
+    box-shadow: 0 4px 16px rgba(29, 42, 58, 0.05);
+}
+
+.card-atom h5 {
+    margin-bottom: 1.25rem;
+    font-weight: 650;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--color-texto);
+    font-weight: 550;
+}
+
+atom-input-text,
+atom-select {
+    display: block;
+}
+
+atom-input-text input,
+atom-select select {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ccd7df;
+    border-radius: 0.4rem;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font: inherit;
+}
+
+atom-input-text input::placeholder {
+    color: #8795a0;
+}
+
+atom-input-text input:focus,
+atom-select select:focus {
+    border-color: var(--color-secundario);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 163, 224, 0.16);
+}
+
+atom-button {
+    display: block;
+}
+
+atom-button .btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--color-primario);
+    --bs-btn-border-color: var(--color-primario);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0a416f;
+    --bs-btn-hover-border-color: #0a416f;
+    --bs-btn-active-bg: #08375e;
+    --bs-btn-active-border-color: #08375e;
+    --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+}
+
+.form-grid {
+    display: grid;
+    gap: 0 1.25rem;
+}
+
+.form-grid--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-actions {
+    margin-top: 0.5rem;
+}
+
+.form-status {
+    margin: 1rem 0 0;
+    color: var(--color-primario);
+    font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+    .container-main {
+        padding-top: 1.25rem;
+    }
+
+    .card-atom {
+        padding: 1.15rem;
+    }
+
+    .form-grid--two {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
